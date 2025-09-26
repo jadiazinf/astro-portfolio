@@ -1,0 +1,19 @@
+---
+import ToggleTheme from "$ui/theme/ToggleTheme.svelte";
+import NavbarLink from "./NavbarLink.astro";
+---
+
+<nav class="w-full h-16 bg-white border-b border-gray-200">
+  <div class="mx-auto h-full flex items-center justify-between container">
+    <div>
+      <a href="/">dev</a>
+    </div>
+    <ul class="hidden md:flex items-center justify-center gap-5">
+      <NavbarLink href="#about-me" text="Sobre mí" />
+      <NavbarLink href="#experience" text="Experiencia" />
+      <NavbarLink href="#projects" text="Proyectos" />
+      <NavbarLink href="#contact" text="Contacto" />
+    </ul>
+    <ToggleTheme client:only />
+  </div>
+</nav>
