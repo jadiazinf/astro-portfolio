@@ -2,26 +2,26 @@
   import { setThemeToCookie } from "$/services/themes/set";
   import { getHtmlThemeClass, setHtmlThemeClass } from "$/utils/htmlDocument/helpers";
   import { MoonIcon, SunIcon } from "$icons/index";
-  import { EThemeEnum } from "./types";
+  import { ETheme } from "./types";
 
   let currentTheme = getHtmlThemeClass();
 
   function toggleTheme() {
     let newThemeValue: string;
 
-    if (currentTheme === EThemeEnum.DARK)
-      newThemeValue = EThemeEnum.LIGHT;
+    if (currentTheme === ETheme.DARK)
+      newThemeValue = ETheme.LIGHT;
     else
-      newThemeValue = EThemeEnum.DARK;
+      newThemeValue = ETheme.DARK;
 
-    currentTheme = newThemeValue as EThemeEnum;
-    setThemeToCookie(newThemeValue as EThemeEnum);
-    setHtmlThemeClass(newThemeValue as EThemeEnum);
+    currentTheme = newThemeValue as ETheme;
+    setThemeToCookie(newThemeValue as ETheme);
+    setHtmlThemeClass(newThemeValue as ETheme);
   }
 </script>
 
 <button on:click={toggleTheme} class="cursor-pointer">
-  {#if currentTheme === EThemeEnum.LIGHT}
+  {#if currentTheme === ETheme.LIGHT}
     <MoonIcon />
   {:else}
     <SunIcon />

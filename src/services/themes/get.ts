@@ -1,13 +1,11 @@
-import { EThemeEnum, THEME_NAME } from "$/components/shared/ui/theme/types";
+import { ETheme, THEME_NAME } from "$/components/shared/ui/theme/types";
 
-export function getThemeFromCookie(request?: Request): EThemeEnum {
+export function getThemeFromCookie(request?: Request): ETheme {
   if (typeof window !== "undefined") {
     const cookies = Object.fromEntries(
       document.cookie.split("; ").map((c) => c.split("="))
     );
-    return cookies[THEME_NAME] === EThemeEnum.DARK
-      ? EThemeEnum.DARK
-      : EThemeEnum.LIGHT;
+    return cookies[THEME_NAME] === ETheme.DARK ? ETheme.DARK : ETheme.LIGHT;
   }
 
   if (request) {
@@ -16,10 +14,8 @@ export function getThemeFromCookie(request?: Request): EThemeEnum {
     const cookies = Object.fromEntries(
       cookieHeader?.split("; ").map((c) => c.split("=")) ?? []
     );
-    return cookies[THEME_NAME] === EThemeEnum.DARK
-      ? EThemeEnum.DARK
-      : EThemeEnum.LIGHT;
+    return cookies[THEME_NAME] === ETheme.DARK ? ETheme.DARK : ETheme.LIGHT;
   }
 
-  return EThemeEnum.LIGHT;
+  return ETheme.LIGHT;
 }

@@ -11,4 +11,9 @@ export default defineConfig({
   },
   output: "server",
   integrations: [svelte()],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+    routing: { prefixDefaultLocale: true },
+  },
 });

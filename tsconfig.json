@@ -12,7 +12,9 @@
       "$pageComponents/*": ["src/components/pages/*"],
       "$ui/*": ["src/components/shared/ui/*"],
       "$icons/*": ["src/components/shared/icons/*"],
-      "$services/*": ["src/services/*"]
+      "$services/*": ["src/services/*"],
+      "$i18n/*": ["src/i18n/*"],
+      "$pages/*": ["src/pages/*"]
     }
   }
 }

@@ -1,11 +1,11 @@
-import { EThemeEnum } from "$/components/shared/ui/theme/types";
+import { ETheme } from "$/components/shared/ui/theme/types";
 
-export function getHtmlThemeClass(): EThemeEnum {
-  return document.documentElement.classList.contains(EThemeEnum.DARK)
-    ? EThemeEnum.DARK
-    : EThemeEnum.LIGHT;
+export function getHtmlThemeClass(): ETheme {
+  return document.documentElement.classList.contains(ETheme.DARK)
+    ? ETheme.DARK
+    : ETheme.LIGHT;
 }
 
-export function setHtmlThemeClass(theme: EThemeEnum) {
-  document.documentElement.classList.toggle("dark", theme === EThemeEnum.DARK);
+export function setHtmlThemeClass(theme: ETheme) {
+  document.documentElement.classList.toggle("dark", theme === ETheme.DARK);
 }

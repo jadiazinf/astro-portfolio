@@ -1,19 +1,36 @@
 ---
 import ToggleTheme from "$ui/theme/ToggleTheme.svelte";
+import ChangeLocalePopover from "$ui/locale/ChangeLocalePopover.svelte";
 import NavbarLink from "./NavbarLink.astro";
+import type { NavbarLinkProps } from "./types";
+import { useTranslations } from "$i18n/utils";
+import { EAppLanguages } from "$i18n/types";
+import Logo from "$ui/logo/Logo.astro";
+
+const currentLang = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLanguages;
+
+const translateNavbarElements = useTranslations(currentLang);
+
+const navbarLinks: NavbarLinkProps[] = [
+  { href: "#about-me", text: translateNavbarElements("components.shared.ui.navbar.about") },
+  { href: "#experience", text: translateNavbarElements("components.shared.ui.navbar.experience") },
+  { href: "#projects", text: translateNavbarElements("components.shared.ui.navbar.projects") },
+  { href: "#contact", text: translateNavbarElements("components.shared.ui.navbar.contact") }
+];
+
 ---
 
 <nav class="w-full h-16 bg-white border-b border-gray-200">
   <div class="mx-auto h-full flex items-center justify-between container">
-    <div>
-      <a href="/">dev</a>
-    </div>
+    <Logo />
     <ul class="hidden md:flex items-center justify-center gap-5">
-      <NavbarLink href="#about-me" text="Sobre mí" />
-      <NavbarLink href="#experience" text="Experiencia" />
-      <NavbarLink href="#projects" text="Proyectos" />
-      <NavbarLink href="#contact" text="Contacto" />
+      {navbarLinks.map((element) => (
+        <NavbarLink href={element.href} text={element.text} />
+      ))}
     </ul>
-    <ToggleTheme client:only />
+    <div class="flex items-center gap-5">
+      <ChangeLocalePopover currentLang={currentLang} currentPath={Astro.url.pathname} client:load/>
+      <ToggleTheme client:only />
+    </div>
   </div>
 </nav>

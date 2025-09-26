@@ -1,13 +1,16 @@
 ---
 import Navbar from '$ui/navbar/Navbar.astro';
-import { EThemeEnum } from '$/components/shared/ui/theme/types';
+import { ETheme, THEME_NAME } from '$/components/shared/ui/theme/types';
 
 import "$styles/global.css";
+import { EAppLanguages } from '$/i18n/types';
 
-const theme = Astro.cookies.get("theme")?.value ?? EThemeEnum.LIGHT;
+const theme = Astro.cookies.get(THEME_NAME)?.value ?? ETheme.LIGHT;
+
+const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
 ---
 
-<html lang="en" class={theme}>
+<html lang={currentLang} class={theme}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,6 +20,8 @@ const theme = Astro.cookies.get("theme")?.value ?? EThemeEnum.LIGHT;
 	</head>
 	<body>
 		<Navbar />
-		<slot />
+		<div class="container mx-auto">
+			<slot />
+		</div>
 	</body>
 </html>

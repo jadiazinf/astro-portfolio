@@ -1,7 +1,7 @@
-import type { EThemeEnum } from "$/components/shared/ui/theme/types";
+import type { ETheme } from "$/components/shared/ui/theme/types";
 import { StatusCodes } from "http-status-codes";
 
-export async function setThemeToCookie(theme: EThemeEnum): Promise<boolean> {
+export async function setThemeToCookie(theme: ETheme): Promise<boolean> {
   try {
     const response = await fetch("/api/cookies/theme", {
       method: "POST",

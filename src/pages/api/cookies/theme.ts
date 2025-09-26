@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { EThemeEnum, THEME_NAME } from "$/components/shared/ui/theme/types";
+import { ETheme, THEME_NAME } from "$/components/shared/ui/theme/types";
 import { StatusCodes } from "http-status-codes";
 
 export const prerender = false;
@@ -7,7 +7,7 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request, cookies }) => {
   const { theme } = await request.json();
 
-  if (theme !== EThemeEnum.LIGHT && theme !== EThemeEnum.DARK) {
+  if (theme !== ETheme.LIGHT && theme !== ETheme.DARK) {
     return new Response(JSON.stringify({ message: "Bad request" }), {
       status: StatusCodes.BAD_REQUEST,
       headers: {
@@ -39,9 +39,7 @@ export const GET: APIRoute = async ({ request }) => {
   );
 
   const themeValue =
-    cookies[THEME_NAME] === EThemeEnum.DARK
-      ? EThemeEnum.DARK
-      : EThemeEnum.LIGHT;
+    cookies[THEME_NAME] === ETheme.DARK ? ETheme.DARK : ETheme.LIGHT;
 
   return new Response(JSON.stringify({ theme: themeValue }), {
     status: StatusCodes.OK,
