@@ -1,5 +1,7 @@
 import { getLocaleTranslations } from "./components/shared/ui/locale/changeLocalePopover";
 import { getNavbarTranslations } from "./components/shared/ui/navbar/navbar";
+import { getAboutMeTranslations } from "./pages/aboutMe";
+import { getExperienceTranslations } from "./pages/experience";
 import { getHeroTranslations } from "./pages/hero";
 import { EAppLanguages } from "./types";
 
@@ -17,6 +19,10 @@ export const AppTranslations = {
     },
     pages: {
       hero: getHeroTranslations().en,
+      aboutMe: getAboutMeTranslations().en,
+      professionalExperience: "Professional Experience",
+      gma: getExperienceTranslations().gma.en,
+      eddu: getExperienceTranslations().eddu.en,
     },
   },
   [EAppLanguages.SPANISH]: {
@@ -30,6 +36,10 @@ export const AppTranslations = {
     },
     pages: {
       hero: getHeroTranslations().es,
+      aboutMe: getAboutMeTranslations().es,
+      professionalExperience: "Experiencia profesional",
+      gma: getExperienceTranslations().gma.es,
+      eddu: getExperienceTranslations().eddu.es,
     },
   },
 };

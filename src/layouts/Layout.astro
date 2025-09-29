@@ -20,8 +20,6 @@ const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
 	</head>
 	<body>
 		<Navbar />
-		<div class="container mx-auto">
-			<slot />
-		</div>
+		<slot />
 	</body>
 </html>
