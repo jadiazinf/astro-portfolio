@@ -1,0 +1,61 @@
+---
+import { EAppLanguages } from "$/i18n/types";
+import { useTranslations } from "$/i18n/utils"
+import { Button } from "$lib/components/ui/button";
+import { LinkedinIcon, MailIcon, GithubIcon } from "$icons/index";
+import ScrollButton from "./ScrollButton.svelte";
+
+const currentLang = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLanguages;
+
+const translations = useTranslations(currentLang);
+
+---
+
+<section class="min-h-screen flex items-center justify-center px-6 pt-20">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="mb-6">
+      <p class="text-muted-foreground mb-2 font-mono">{ translations("pages.hero.helloThere") }</p>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-balance">
+        <span class="gradient-text">Jesus Diaz</span>
+      </h1>
+      <h2 class="text-2xl md:text-3xl font-semibold text-muted-foreground mb-6">{translations("pages.hero.fullStackDeveloper")}</h2>
+    </div>
+
+    <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 text-pretty leading-relaxed">
+      { translations("pages.hero.description") }
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <Button size="lg" class="font-semibold">
+        { translations("pages.hero.myJob") }
+      </Button>
+      <Button variant="outline" size="lg">
+        { translations("pages.hero.downloadCv") }
+      </Button>
+    </div>
+
+    <div class="flex items-center justify-center space-x-6 mb-12">
+      <a
+        href="https://github.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <GithubIcon class="h-6 w-6" />
+      </a>
+      <a
+        href="https://linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <LinkedinIcon class="h-6 w-6" />
+      </a>
+      <a href="mailto:tu@email.com" class="text-muted-foreground hover:text-foreground transition-colors">
+        <MailIcon class="h-6 w-6" />
+      </a>
+    </div>
+
+    <ScrollButton client:load/>
+  </div>
+</section>

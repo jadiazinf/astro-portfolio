@@ -20,17 +20,19 @@ const navbarLinks: NavbarLinkProps[] = [
 
 ---
 
-<nav class="w-full h-16 bg-white border-b border-gray-200">
-  <div class="mx-auto h-full flex items-center justify-between container">
-    <Logo />
-    <ul class="hidden md:flex items-center justify-center gap-5">
-      {navbarLinks.map((element) => (
-        <NavbarLink href={element.href} text={element.text} />
-      ))}
-    </ul>
-    <div class="flex items-center gap-5">
-      <ChangeLocalePopover currentLang={currentLang} currentPath={Astro.url.pathname} client:load/>
-      <ToggleTheme client:only />
+<header class="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4">
+    <div class="mx-auto h-full flex items-center justify-between container">
+      <Logo />
+      <ul class="hidden md:flex items-center justify-center gap-5">
+        {navbarLinks.map((element) => (
+          <NavbarLink href={element.href} text={element.text} />
+        ))}
+      </ul>
+      <div class="flex items-center gap-5">
+        <ChangeLocalePopover currentLang={currentLang} currentPath={Astro.url.pathname} client:load/>
+        <ToggleTheme client:only />
+      </div>
     </div>
   </div>
-</nav>
+</header>

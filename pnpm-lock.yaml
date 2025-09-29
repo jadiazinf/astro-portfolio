@@ -23,6 +23,9 @@ importers:
       http-status-codes:
         specifier: ^2.3.0
         version: 2.3.0
+      lucide:
+        specifier: ^0.544.0
+        version: 0.544.0
       svelte:
         specifier: ^5.39.6
         version: 5.39.6
@@ -1159,6 +1162,9 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
+  lucide@0.544.0:
+    resolution: {integrity: sha512-U5ORwr5z9Sx7bNTDFaW55RbjVdQEnAcT3vws9uz3vRT1G4XXJUDAhRZdxhFoIyHEvjmTkzzlEhjSLYM5n4mb5w==}
 
   magic-string@0.30.19:
     resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
@@ -2938,6 +2944,8 @@ snapshots:
   longest-streak@3.1.0: {}
 
   lru-cache@10.4.3: {}
+
+  lucide@0.544.0: {}
 
   magic-string@0.30.19:
     dependencies:

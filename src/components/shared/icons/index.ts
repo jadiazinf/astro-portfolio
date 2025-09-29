@@ -1,2 +1,6 @@
 export { default as MoonIcon } from "./MoonIcon.svelte";
 export { default as SunIcon } from "./SunIcon.svelte";
+export { default as LinkedinIcon } from "./Linkedin.svelte";
+export { default as MailIcon } from "./Mail.svelte";
+export { default as GithubIcon } from "./Github.svelte";
+export { default as ArrowDownIcon } from "./ArrowDown.svelte";

@@ -1,5 +1,6 @@
 import { getLocaleTranslations } from "./components/shared/ui/locale/changeLocalePopover";
 import { getNavbarTranslations } from "./components/shared/ui/navbar/navbar";
+import { getHeroTranslations } from "./pages/hero";
 import { EAppLanguages } from "./types";
 
 const defaultLang = EAppLanguages.ENGLISH;
@@ -14,7 +15,9 @@ export const AppTranslations = {
         },
       },
     },
-    pages: {},
+    pages: {
+      hero: getHeroTranslations().en,
+    },
   },
   [EAppLanguages.SPANISH]: {
     components: {
@@ -25,7 +28,9 @@ export const AppTranslations = {
         },
       },
     },
-    pages: {},
+    pages: {
+      hero: getHeroTranslations().es,
+    },
   },
 };
 
