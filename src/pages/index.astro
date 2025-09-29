@@ -1,9 +1,10 @@
 ---
-import HeroSection from "$components/pageComponents/Hero.astro";
-import AboutMeSection from "$components/pageComponents/AboutMe.astro";
+import HeroSection from "$pageComponents/Hero.astro";
+import AboutMeSection from "$pageComponents/AboutMe.astro";
 import Layout from "$layouts/Layout.astro";
 import MyExperienceSection from "$/components/pageComponents/MyExperience.astro";
 import SkillsSection from "$/components/pageComponents/Skills.astro";
+import ContactSection from "$pageComponents/Contact.astro"
 ---
 
 <Layout>
@@ -11,4 +12,5 @@ import SkillsSection from "$/components/pageComponents/Skills.astro";
 	<AboutMeSection />
 	<MyExperienceSection />
 	<SkillsSection />
+	<ContactSection />
 </Layout>

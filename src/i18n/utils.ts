@@ -1,6 +1,7 @@
 import { getLocaleTranslations } from "./components/shared/ui/locale/changeLocalePopover";
 import { getNavbarTranslations } from "./components/shared/ui/navbar/navbar";
 import { getAboutMeTranslations } from "./pages/aboutMe";
+import { getContactTranslations } from "./pages/contact";
 import { getExperienceTranslations } from "./pages/experience";
 import { getHeroTranslations } from "./pages/hero";
 import { EAppLanguages } from "./types";
@@ -25,6 +26,7 @@ export const AppTranslations = {
       gma: getExperienceTranslations().gma.en,
       eddu: getExperienceTranslations().eddu.en,
       skills: "Technical Skills",
+      contact: getContactTranslations().en,
     },
   },
   [EAppLanguages.SPANISH]: {
@@ -44,6 +46,7 @@ export const AppTranslations = {
       gma: getExperienceTranslations().gma.es,
       eddu: getExperienceTranslations().eddu.es,
       skills: "Habilidades Técnicas",
+      contact: getContactTranslations().es,
     },
   },
 };

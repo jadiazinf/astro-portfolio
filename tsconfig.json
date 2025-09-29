@@ -9,7 +9,7 @@
       "$components/*": ["src/components/*"],
       "$layouts/*": ["src/layouts/*"],
       "$styles/*": ["src/styles/*"],
-      "$pageComponents/*": ["src/components/pages/*"],
+      "$pageComponents/*": ["src/components/pageComponents/*"],
       "$ui/*": ["src/components/shared/ui/*"],
       "$icons/*": ["src/components/shared/icons/*"],
       "$services/*": ["src/services/*"],

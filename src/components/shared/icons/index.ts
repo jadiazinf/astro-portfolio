@@ -4,3 +4,5 @@ export { default as LinkedinIcon } from "./Linkedin.svelte";
 export { default as MailIcon } from "./Mail.svelte";
 export { default as GithubIcon } from "./Github.svelte";
 export { default as ArrowDownIcon } from "./ArrowDown.svelte";
+export { default as PhoneIcon } from "./Phone.svelte";
+export { default as MapPinIcon } from "./MapPinIcon.svelte";
