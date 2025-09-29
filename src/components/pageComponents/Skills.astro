@@ -1,0 +1,70 @@
+---
+import { EAppLanguages } from "$/i18n/types";
+import { useTranslations } from "$/i18n/utils";
+
+const currentLang = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLanguages;
+
+const translations = useTranslations(currentLang);
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "React", level: 90 },
+      { name: "Next.js", level: 90 },
+      { name: "TypeScript", level: 90 },
+      { name: "Tailwind CSS", level: 90 },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", level: 90 },
+      { name: "PostgreSQL", level: 80 },
+      { name: "Java", level: 50 },
+      { name: "Spring Boot", level: 40 }
+    ],
+  },
+  {
+    title: "Herramientas",
+    skills: [
+      { name: "Git & Github", level: 80 },
+      { name: "Docker", level: 50 },
+      { name: "Google Cloud Platform", level: 50 },
+      { name: "Jest", level: 60 },
+    ],
+  },
+]
+---
+
+<section class="py-20 px-6 bg-muted/30">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center text-balance">{ translations("pages.skills") }</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {skillCategories.map((category, index) => (
+        <div class="space-y-6">
+          <h3 class="text-xl font-semibold text-center mb-6">{category.title}</h3>
+
+          <div class="space-y-4">
+            {category.skills.map((skill, skillIndex) => (
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm font-medium">{skill.name}</span>
+                  <span class="text-xs text-muted-foreground">{skill.level}%</span>
+                </div>
+                <div class="w-full bg-muted rounded-full h-2">
+                  <div
+                    class="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+

@@ -24,6 +24,7 @@ export const AppTranslations = {
       portfolio: getExperienceTranslations().portfolio.en,
       gma: getExperienceTranslations().gma.en,
       eddu: getExperienceTranslations().eddu.en,
+      skills: "Technical Skills",
     },
   },
   [EAppLanguages.SPANISH]: {
@@ -42,6 +43,7 @@ export const AppTranslations = {
       portfolio: getExperienceTranslations().portfolio.es,
       gma: getExperienceTranslations().gma.es,
       eddu: getExperienceTranslations().eddu.es,
+      skills: "Habilidades Técnicas",
     },
   },
 };
