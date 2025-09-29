@@ -4,7 +4,10 @@
   import { useTranslations } from "$/i18n/utils";
   import type { NavbarLinkProps } from "./types";
 
+
   const { currentLang } = $props();
+
+  let open = $state(false);
 
   const translations = useTranslations(currentLang);
 
@@ -16,17 +19,33 @@
     { href: "#contact", text: translations("components.shared.ui.navbar.contact") }
   ];
 
+  function scrollToSection(href: string) {
+    const id = href.replace("#", "");
+    const target = document.getElementById(id);
+    if (target) {
+      // Espera un pequeño delay para que el drawer se cierre antes del scroll
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+
+    open = false;
+
+  }
+
 </script>
 
 
-<Drawer.Root>
+<Drawer.Root bind:open>
   <Drawer.Trigger class="cursor-pointer md:hidden">
     <BurgerMenuIcon />
   </Drawer.Trigger>
   <Drawer.Content class="w-full h-1/2">
-    <div class="flex h-full flex-col gap-5 justify-center items-center">
+    <div class="h-full flex flex-col items-center justify-center gap-5">
       {#each navbarLinks as {href, text} }
-        <a href={href}>{text}</a>
+        <button onclick={() => scrollToSection(href)} class="text-base font-medium">
+          {text}
+        </button>
       {/each}
     </div>
   </Drawer.Content>
