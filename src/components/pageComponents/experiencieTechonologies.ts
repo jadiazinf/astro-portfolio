@@ -1,7 +1,9 @@
 export const experienceTechnologies = {
+  portfolio: ["Astro.js", "Svelte.js", "Tailwindcss", "Shadcn", "v0"],
   gma: [
     "Next.js",
     "TypeScript",
+    "Tailwindcss",
     "Ruby on Rails",
     "PostgreSQL",
     "Vercel",
@@ -14,6 +16,7 @@ export const experienceTechnologies = {
   eddu: [
     "Next.js",
     "TypeScript",
+    "Tailwindcss",
     "Nodejs",
     "PostgreSQL",
     "Google Cloud Platform",
