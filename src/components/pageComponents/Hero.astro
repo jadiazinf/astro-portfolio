@@ -4,12 +4,16 @@ import { useTranslations } from "$/i18n/utils"
 import { Button } from "$lib/components/ui/button";
 import { MailIcon } from "$icons/index";
 import ScrollButton from "./ScrollButton.svelte";
-import GithubLink from "../shared/ui/github/GithubLink.astro";
-import LinkedinLink from "../shared/ui/linkedin/LinkedinLink.astro";
+import GithubLink from "$components/shared/ui/github/GithubLink.astro";
+import LinkedinLink from "$components/shared/ui/linkedin/LinkedinLink.astro";
+import enCv from "$cv/DiazJesus_CV_EN.pdf";
+import esCv from "$cv/DiazJesus_CV_ES.pdf";
 
 const currentLang = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLanguages;
 
 const translations = useTranslations(currentLang);
+
+const cvHref = currentLang === EAppLanguages.SPANISH ? esCv : enCv;
 
 ---
 
@@ -28,11 +32,15 @@ const translations = useTranslations(currentLang);
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-      <Button size="lg" class="font-semibold">
-        { translations("pages.hero.myJob") }
+      <Button size="lg" class="font-semibold cursor-pointer" asChild>
+        <a href="#experience">
+          { translations("pages.hero.myJob") }
+        </a>
       </Button>
-      <Button variant="outline" size="lg">
-        { translations("pages.hero.downloadCv") }
+      <Button variant="outline" size="lg" class="cursor-pointer" asChild>
+        <a href={cvHref} download>
+          { translations("pages.hero.downloadCv") }
+        </a>
       </Button>
     </div>
 

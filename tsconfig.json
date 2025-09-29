@@ -16,6 +16,7 @@
       "$i18n/*": ["src/i18n/*"],
       "$pages/*": ["src/pages/*"],
       "$images/*": ["src/static/images/*"],
+      "$cv/*": ["src/static/cv/*"],
       "$utils/*": ["src/utils/*"]
     }
   }

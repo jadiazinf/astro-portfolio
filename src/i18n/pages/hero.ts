@@ -7,7 +7,7 @@ export function getHeroTranslations() {
       fullStackDeveloper: "Full Stack Developer",
       description:
         "Graduate of Universidad Católica Andrés Bello in Caracas, Venezuela. Specialized in crafting exceptional digital experiences that blend elegant design with robust code.",
-      myJob: "See my job",
+      myJob: "See my jobs",
       downloadCv: "Download CV",
     },
     [EAppLanguages.SPANISH]: {
@@ -15,7 +15,7 @@ export function getHeroTranslations() {
       fullStackDeveloper: "Desarrollador Full Stack",
       description:
         "Graduado de la Universidad Católica Andrés Bello en Caracas, Venezuela. Especializado en crear experiencias digitales excepcionales que combinan diseño elegante con código robusto.",
-      myJob: "Ver mi trabajo",
+      myJob: "Ver mis trabajos",
       downloadCv: "Descargar CV",
     },
   };
