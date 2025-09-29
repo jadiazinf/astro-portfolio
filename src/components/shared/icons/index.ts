@@ -6,3 +6,4 @@ export { default as GithubIcon } from "./Github.svelte";
 export { default as ArrowDownIcon } from "./ArrowDown.svelte";
 export { default as PhoneIcon } from "./Phone.svelte";
 export { default as MapPinIcon } from "./MapPinIcon.svelte";
+export { default as BurgerMenuIcon } from "./BurgerMenu.svelte";

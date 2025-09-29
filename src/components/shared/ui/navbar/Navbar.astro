@@ -6,16 +6,18 @@ import type { NavbarLinkProps } from "./types";
 import { useTranslations } from "$i18n/utils";
 import { EAppLanguages } from "$i18n/types";
 import Logo from "$ui/logo/Logo.astro";
+import Menu from "$ui/navbar/Menu.svelte";
 
 const currentLang = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLanguages;
 
-const translateNavbarElements = useTranslations(currentLang);
+const translations = useTranslations(currentLang);
 
 const navbarLinks: NavbarLinkProps[] = [
-  { href: "#about-me", text: translateNavbarElements("components.shared.ui.navbar.about") },
-  { href: "#experience", text: translateNavbarElements("components.shared.ui.navbar.experience") },
-  { href: "#projects", text: translateNavbarElements("components.shared.ui.navbar.projects") },
-  { href: "#contact", text: translateNavbarElements("components.shared.ui.navbar.contact") }
+  { href: "#about", text: translations("components.shared.ui.navbar.about") },
+  { href: "#experience", text: translations("components.shared.ui.navbar.experience") },
+  // { href: "#projects", text: translations("components.shared.ui.navbar.projects") },
+  { href: "#skills", text: translations("components.shared.ui.navbar.skills") },
+  { href: "#contact", text: translations("components.shared.ui.navbar.contact") }
 ];
 
 ---
@@ -23,7 +25,10 @@ const navbarLinks: NavbarLinkProps[] = [
 <header class="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
   <div class="max-w-6xl mx-auto px-6 py-4">
     <div class="mx-auto h-full flex items-center justify-between container">
-      <Logo />
+      <div class="flex items-center gap-5">
+        <Logo />
+        <Menu currentLang={currentLang} client:load/>
+      </div>
       <ul class="hidden md:flex items-center justify-center gap-5">
         {navbarLinks.map((element) => (
           <NavbarLink href={element.href} text={element.text} />

@@ -2,7 +2,9 @@
 import type { NavbarLinkProps } from "./types";
 
 const { href, text } = Astro.props as NavbarLinkProps;
+const locale = Astro.currentLocale;
+const localizedHref = `/${locale}${href.startsWith("/") ? href : `/${href}`}`;
 ---
 <li class="transition-colors duration-200">
-  <a href={href}>{text}</a>
+  <a href={localizedHref}>{text}</a>
 </li>

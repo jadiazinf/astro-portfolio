@@ -8,12 +8,14 @@ export function getNavbarTranslations(): TGetNavbarTranslations {
       contact: "Contact",
       experience: "Experience",
       projects: "Projects",
+      skills: "Skills",
     },
     [EAppLanguages.SPANISH]: {
       about: "Sobre mí",
       contact: "Contacto",
       experience: "Experiencia",
       projects: "Proyectos",
+      skills: "Habilidades",
     },
   };
 }

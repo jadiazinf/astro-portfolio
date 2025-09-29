@@ -4,7 +4,8 @@ export type TNavbarTranslationKey =
   | "about"
   | "contact"
   | "experience"
-  | "projects";
+  | "projects"
+  | "skills";
 
 export type TNavbarTranslations = Record<TNavbarTranslationKey, string>;
 
