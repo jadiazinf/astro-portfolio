@@ -21,5 +21,11 @@ export default defineConfig({
     routing: { prefixDefaultLocale: true },
   },
 
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/noop",
+    },
+  },
+
   adapter: vercel(),
 });
