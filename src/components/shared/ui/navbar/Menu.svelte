@@ -23,7 +23,6 @@
     const id = href.replace("#", "");
     const target = document.getElementById(id);
     if (target) {
-      // Espera un pequeño delay para que el drawer se cierre antes del scroll
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 100);
