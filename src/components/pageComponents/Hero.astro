@@ -2,8 +2,10 @@
 import { EAppLanguages } from "$/i18n/types";
 import { useTranslations } from "$/i18n/utils"
 import { Button } from "$lib/components/ui/button";
-import { LinkedinIcon, MailIcon, GithubIcon } from "$icons/index";
+import { MailIcon } from "$icons/index";
 import ScrollButton from "./ScrollButton.svelte";
+import GithubLink from "../shared/ui/github/GithubLink.astro";
+import LinkedinLink from "../shared/ui/linkedin/LinkedinLink.astro";
 
 const currentLang = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLanguages;
 
@@ -35,22 +37,8 @@ const translations = useTranslations(currentLang);
     </div>
 
     <div class="flex items-center justify-center space-x-6 mb-12">
-      <a
-        href="https://github.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-muted-foreground hover:text-foreground transition-colors"
-      >
-        <GithubIcon class="h-6 w-6" />
-      </a>
-      <a
-        href="https://linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-muted-foreground hover:text-foreground transition-colors"
-      >
-        <LinkedinIcon class="h-6 w-6" />
-      </a>
+      <GithubLink />
+      <LinkedinLink />
       <a href="mailto:tu@email.com" class="text-muted-foreground hover:text-foreground transition-colors">
         <MailIcon class="h-6 w-6" />
       </a>
