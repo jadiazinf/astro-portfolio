@@ -24,14 +24,14 @@ export function getExperienceTranslations() {
         title: "Full Stack Developer",
         company: "GMA Desarrollo, Caracas, Venezuela",
         description:
-          "Developed a marketplace for automotive workshops, allowing users to search for services, request quotes, hire providers, and track service history. Businesses could monitor service quality metrics, completed jobs, and customer satisfaction. Technologies used: Next.js (v15), Ruby on Rails (v7), PostgreSQL (v14)",
+          "Developed a marketplace for automotive workshops, allowing users to search for services, request quotes, hire providers, and track service history. Businesses could monitor service quality metrics, completed jobs, and customer satisfaction. Technologies used: Next.js (v13), Ruby on Rails (v7), PostgreSQL (v14)",
       },
       [EAppLanguages.SPANISH]: {
         period: "abril 2024 – julio 2025",
         title: "Desarrollador Full Stack",
         company: "GMA Desarrollo, Caracas, Venezuela",
         description:
-          "Desarrollo de un marketplace de talleres automotrices, donde los usuarios pueden buscar talleres, solicitar presupuestos, contratar servicios y llevar un historial. Las empresas pueden visualizar métricas de calidad, servicios completados y satisfacción del cliente. Tecnologías utilizadas: Next.js (v15), Ruby on Rails (v7), PostgreSQL (v14).",
+          "Desarrollo de un marketplace de talleres automotrices, donde los usuarios pueden buscar talleres, solicitar presupuestos, contratar servicios y llevar un historial. Las empresas pueden visualizar métricas de calidad, servicios completados y satisfacción del cliente. Tecnologías utilizadas: Next.js (v13), Ruby on Rails (v7), PostgreSQL (v14).",
       },
     },
     eddu: {
