@@ -1,9 +1,9 @@
 ---
 import Navbar from '$ui/navbar/Navbar.astro';
 import { ETheme, THEME_NAME } from '$/components/shared/ui/theme/types';
+import { EAppLanguages } from '$/i18n/types';
 
 import "$styles/global.css";
-import { EAppLanguages } from '$/i18n/types';
 
 const theme = Astro.cookies.get(THEME_NAME)?.value ?? ETheme.LIGHT;
 
@@ -13,10 +13,10 @@ const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
 <html lang={currentLang} class={`${theme} scroll-smooth`}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Jesus Diaz - Full Stack Developer</title>
   </head>
   <body>
     <Navbar />
