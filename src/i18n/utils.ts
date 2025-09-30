@@ -5,6 +5,7 @@ import { getContactTranslations } from "./pages/contact";
 import { getExperienceTranslations } from "./pages/experience";
 import { getHeroTranslations } from "./pages/hero";
 import { EAppLanguages } from "./types";
+import { getEmailTranslations } from "./utils/emails/emails";
 
 const defaultLang = EAppLanguages.ENGLISH;
 
@@ -28,6 +29,13 @@ export const AppTranslations = {
       skills: "Technical Skills",
       contact: getContactTranslations().en,
     },
+    utils: {
+      emails: {
+        schema: getEmailTranslations().en,
+        okResponse: "Email sent succesfully",
+        badResponse: "The email could not be sent. Please try again later.",
+      },
+    },
   },
   [EAppLanguages.SPANISH]: {
     components: {
@@ -47,6 +55,13 @@ export const AppTranslations = {
       eddu: getExperienceTranslations().eddu.es,
       skills: "Habilidades Técnicas",
       contact: getContactTranslations().es,
+    },
+    utils: {
+      emails: {
+        schema: getEmailTranslations().es,
+        okResponse: "Email enviado exitosamente",
+        badResponse: "No se pudo enviar el correo, intente de nuevo más tarde.",
+      },
     },
   },
 };

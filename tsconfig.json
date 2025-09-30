@@ -1,23 +1,56 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "$/*": ["src/*"],
-      "$components/*": ["src/components/*"],
-      "$layouts/*": ["src/layouts/*"],
-      "$styles/*": ["src/styles/*"],
-      "$pageComponents/*": ["src/components/pageComponents/*"],
-      "$ui/*": ["src/components/shared/ui/*"],
-      "$icons/*": ["src/components/shared/icons/*"],
-      "$services/*": ["src/services/*"],
-      "$i18n/*": ["src/i18n/*"],
-      "$pages/*": ["src/pages/*"],
-      "$images/*": ["src/static/images/*"],
-      "$cv/*": ["src/static/cv/*"],
-      "$utils/*": ["src/utils/*"]
-    }
+      "$/*": [
+        "src/*"
+      ],
+      "$components/*": [
+        "src/components/*"
+      ],
+      "$layouts/*": [
+        "src/layouts/*"
+      ],
+      "$styles/*": [
+        "src/styles/*"
+      ],
+      "$pageComponents/*": [
+        "src/components/pageComponents/*"
+      ],
+      "$ui/*": [
+        "src/components/shared/ui/*"
+      ],
+      "$icons/*": [
+        "src/components/shared/icons/*"
+      ],
+      "$services/*": [
+        "src/services/*"
+      ],
+      "$i18n/*": [
+        "src/i18n/*"
+      ],
+      "$pages/*": [
+        "src/pages/*"
+      ],
+      "$images/*": [
+        "src/static/images/*"
+      ],
+      "$cv/*": [
+        "src/static/cv/*"
+      ],
+      "$utils/*": [
+        "src/utils/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
