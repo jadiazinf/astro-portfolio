@@ -37,7 +37,6 @@ export default defineConfig({
   },
 
   adapter: vercel({
-    includeFiles: ["dist/server//*"],
     imageService: true,
     webAnalytics: {
       enabled: true,
