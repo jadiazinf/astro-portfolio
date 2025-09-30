@@ -29,7 +29,7 @@ const translateLocaleElements = useTranslations(currentLang);
 </script>
 
 <Popover.Root>
-  <Popover.Trigger class="cursor-pointer">
+  <Popover.Trigger class="cursor-pointer" aria-label="Change locale">
     <span>
       { currentLang }
     </span>

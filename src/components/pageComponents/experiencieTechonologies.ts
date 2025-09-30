@@ -1,5 +1,5 @@
 export const experienceTechnologies = {
-  portfolio: ["Astro.js", "Svelte.js", "Tailwindcss", "Shadcn", "v0"],
+  portfolio: ["Astro.js", "Svelte.js", "Tailwindcss", "Shadcn", "v0", "SEO"],
   gma: [
     "Next.js",
     "TypeScript",

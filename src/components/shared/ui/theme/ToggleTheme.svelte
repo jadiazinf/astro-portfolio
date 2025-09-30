@@ -20,7 +20,7 @@
   }
 </script>
 
-<button on:click={toggleTheme} class="cursor-pointer">
+<button on:click={toggleTheme} class="cursor-pointer" aria-label="Toggle color theme">
   {#if currentTheme === ETheme.LIGHT}
     <MoonIcon />
   {:else}

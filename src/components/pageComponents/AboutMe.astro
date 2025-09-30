@@ -9,7 +9,7 @@ const currentLanguage = (Astro.currentLocale ?? EAppLanguages.ENGLISH) as EAppLa
 const translate = useTranslations(currentLanguage);
 ---
 
-<section id="about" class="py-20 px-6">
+<section id="about" class="py-20 px-6" aria-label="About me section for landing page">
   <div class="max-w-4xl mx-auto">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
@@ -29,7 +29,7 @@ const translate = useTranslations(currentLanguage);
 
       <div class="relative">
         <div class="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
-          <Image src={ProfileImage} alt="A super sensual pic of me" class="rounded-2xl"/>
+          <Image src={ProfileImage} alt="A super sensual pic of me" class="rounded-2xl" aria-label="A pic of me as a software developer"/>
         </div>
       </div>
     </div>
