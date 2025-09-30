@@ -15,7 +15,12 @@ export default defineConfig({
   },
 
   output: "server",
-  integrations: [svelte(), sitemap()],
+  integrations: [
+    svelte(),
+    sitemap({
+      i18n: { locales: { en: "English", es: "Español" }, defaultLocale: "en" },
+    }),
+  ],
 
   i18n: {
     defaultLocale: "en",
