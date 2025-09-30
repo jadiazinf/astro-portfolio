@@ -10,7 +10,7 @@ const theme = Astro.cookies.get(THEME_NAME)?.value ?? ETheme.LIGHT;
 const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
 ---
 
-<html lang={currentLang} class={theme}>
+<html lang={currentLang} class={`${theme} scroll-smooth`}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
