@@ -11,14 +11,17 @@ const site = Astro.site;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={new URL(url, site).toString()} />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="/favicon.png" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+
+  <link rel="alternate" hreflang="en" href="https://astro-portfolio-eight-rho.vercel.app/en/" />
+  <link rel="alternate" hreflang="es" href="https://astro-portfolio-eight-rho.vercel.app/es/" />
+
 </head>

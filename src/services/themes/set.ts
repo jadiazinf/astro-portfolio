@@ -13,14 +13,12 @@ export async function setThemeToCookie(theme: ETheme): Promise<boolean> {
     });
 
     if (response.status !== StatusCodes.OK) {
-      console.warn(`Failed to set theme cookie: ${response.status}`);
       return false;
     }
 
     const data = await response.json();
     return data.theme === theme;
   } catch (error) {
-    console.error("Error setting theme cookie:", error);
     return false;
   }
 }

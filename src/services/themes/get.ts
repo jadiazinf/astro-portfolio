@@ -9,7 +9,6 @@ export function getThemeFromCookie(request?: Request): ETheme {
   }
 
   if (request) {
-    console.log("la cookie", request.headers.get("cookie"));
     const cookieHeader = request.headers.get("cookie");
     const cookies = Object.fromEntries(
       cookieHeader?.split("; ").map((c) => c.split("=")) ?? []

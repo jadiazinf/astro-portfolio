@@ -17,12 +17,11 @@ const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
     <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Jesus Diaz - Full Stack Developer</title>
-    <BaseHead title="Jesús Díaz – Full Stack Developer" description="Portafolio técnico de Jesús Díaz, especializado en Astro, Svelte y UI escalable." url={Astro.url.pathname} />
+    <BaseHead title="Jesús Díaz – Full Stack Developer" description="Technical portfolio of Jesús Díaz, a software engineer focused on developing scalable and maintainable web applications." url={Astro.url.pathname} />
   </head>
   <body>
     <Navbar />
-    <slot />
+    <slot role="main"/>
   </body>
 </html>
 

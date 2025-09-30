@@ -42,7 +42,6 @@ export const POST: APIRoute = async ({ request }) => {
       status: StatusCodes.OK,
     });
   } catch (error) {
-    console.error("error sending email:", error);
     return new Response(JSON.stringify({ success: false, error }), {
       status: StatusCodes.INTERNAL_SERVER_ERROR,
     });
