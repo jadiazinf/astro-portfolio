@@ -6,7 +6,7 @@ import svelte from "@astrojs/svelte";
 
 import vercel from "@astrojs/vercel";
 
-import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,13 +15,15 @@ export default defineConfig({
   },
 
   output: "server",
-  integrations: [svelte(), react()],
+  integrations: [svelte(), sitemap()],
 
   i18n: {
     defaultLocale: "en",
     locales: ["en", "es"],
     routing: { prefixDefaultLocale: true },
   },
+
+  site: "https://astro-portfolio-eight-rho.vercel.app",
 
   image: {
     service: {

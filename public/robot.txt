@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://astro-portfolio-eight-rho.vercel.app/sitemap-index.xml
