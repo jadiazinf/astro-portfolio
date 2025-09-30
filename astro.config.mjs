@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 
 import svelte from "@astrojs/svelte";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 import sitemap from "@astrojs/sitemap";
 
@@ -36,5 +36,11 @@ export default defineConfig({
     },
   },
 
-  adapter: vercel({}),
+  adapter: vercel({
+    includeFiles: ["dist/server//*"],
+    imageService: true,
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });

@@ -1,5 +1,5 @@
 import { j as joinPaths, i as isRemotePath, t as typeHandlers, a as types } from './index_DKHmmOtR.mjs';
-import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, h as UnsupportedImageConversion, t as toStyleString, N as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, i as ExpectedImageOptions, j as ExpectedNotESMImage, k as InvalidImageService, c as createComponent, d as createAstro, l as ImageMissingAlt, m as maybeRenderHead, b as addAttribute, s as spreadAttributes, a as renderTemplate, n as ExperimentalFontsNotEnabled, o as FontFamilyNotFound, u as unescapeHTML } from './astro/server_DftBg5Oc.mjs';
+import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, h as UnsupportedImageConversion, t as toStyleString, N as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, i as ExpectedImageOptions, j as ExpectedNotESMImage, k as InvalidImageService, c as createComponent, d as createAstro, l as ImageMissingAlt, m as maybeRenderHead, b as addAttribute, s as spreadAttributes, a as renderTemplate, n as ExperimentalFontsNotEnabled, o as FontFamilyNotFound, u as unescapeHTML } from './astro/server_L-HSU99n.mjs';
 import 'clsx';
 
 const VALID_SUPPORTED_FORMATS = [
@@ -518,7 +518,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './noop_Bkvqf5Mx.mjs'
+      './build-service_BQt4L-mU.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1227,7 +1227,7 @@ const $$Font = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${preload && data.preloadData.map(({ url, type }) => renderTemplate`<link rel="preload"${addAttribute(url, "href")} as="font"${addAttribute(`font/${type}`, "type")} crossorigin>`)}<style>${unescapeHTML(data.css)}</style>`;
 }, "/home/jesusdicen/Proyects/Portfolio/Codebase/node_modules/.pnpm/astro@5.14.0_@types+node@24.5.2_@vercel+functions@2.2.13_@aws-sdk+credential-provider-w_99dda6827149e1fe4aa6d23b4c4baf91/node_modules/astro/components/Font.astro", void 0);
 
-const imageConfig = {"endpoint":{"route":"/_image"},"service":{"entrypoint":"astro/assets/services/noop","config":{}},"domains":[],"remotePatterns":[],"responsiveStyles":false};
+const imageConfig = {"endpoint":{"route":"/_image"},"service":{"entrypoint":"@astrojs/vercel/build-image-service","config":{"sizes":[640,750,828,1080,1200,1920,2048,3840],"domains":[],"remotePatterns":[]}},"domains":[],"remotePatterns":[],"responsiveStyles":false,"breakpoints":[640,750,828,1080,1200,1920,2048,3840]};
 							const getImage = async (options) => await getImage$1(options, imageConfig);
 
-export { $$Image as $, isRemoteAllowed as a, baseService as b, getConfiguredImageService as g, imageConfig as i, lookup as l };
+export { $$Image as $, isRemoteAllowed as a, isESMImportedImage as b, baseService as c, getConfiguredImageService as g, imageConfig as i, lookup as l };

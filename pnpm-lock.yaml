@@ -29,6 +29,9 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
+      codebase:
+        specifier: 'link:'
+        version: 'link:'
       ejs:
         specifier: ^3.1.10
         version: 3.1.10
