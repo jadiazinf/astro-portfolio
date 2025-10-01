@@ -2,6 +2,7 @@
 import Navbar from '$ui/navbar/Navbar.astro';
 import { ETheme, THEME_NAME } from '$/components/shared/ui/theme/types';
 import { EAppLanguages } from '$/i18n/types';
+import Analytics from '@vercel/analytics/astro'
 
 import "$styles/global.css";
 import BaseHead from '$components/seo/BaseHead.astro';
@@ -20,6 +21,7 @@ const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
     <BaseHead title="Jesús Díaz – Full Stack Developer" description="Technical portfolio of Jesús Díaz, a software engineer focused on developing scalable and maintainable web applications." url={Astro.url.pathname} />
   </head>
   <body>
+    <Analytics />
     <Navbar />
     <slot role="main"/>
   </body>
