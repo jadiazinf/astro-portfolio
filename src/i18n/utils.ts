@@ -26,7 +26,10 @@ export const AppTranslations = {
       portfolio: getExperienceTranslations().portfolio.en,
       gma: getExperienceTranslations().gma.en,
       eddu: getExperienceTranslations().eddu.en,
-      skills: "Technical Skills",
+      skills: {
+        title: "Skills",
+        tools: "Tools",
+      },
       contact: getContactTranslations().en,
     },
     utils: {
@@ -53,7 +56,10 @@ export const AppTranslations = {
       portfolio: getExperienceTranslations().portfolio.es,
       gma: getExperienceTranslations().gma.es,
       eddu: getExperienceTranslations().eddu.es,
-      skills: "Habilidades Técnicas",
+      skills: {
+        title: "Habilidades",
+        tools: "Herramientas",
+      },
       contact: getContactTranslations().es,
     },
     utils: {

@@ -26,7 +26,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Herramientas",
+    title: translations("pages.skills.tools"),
     skills: [
       { name: "Git & Github", level: 80 },
       { name: "Docker", level: 50 },
@@ -39,7 +39,7 @@ const skillCategories = [
 
 <section id="skills" class="py-20 px-6 bg-muted/30" aria-label="My software developer technical skills">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-12 text-center text-balance">{ translations("pages.skills") }</h2>
+    <h2 class="text-3xl font-bold mb-12 text-center text-balance">{ translations("pages.skills.title") }</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
       {skillCategories.map((category, index) => (
