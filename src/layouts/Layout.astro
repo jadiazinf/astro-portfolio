@@ -3,6 +3,7 @@ import Navbar from '$ui/navbar/Navbar.astro';
 import { ETheme, THEME_NAME } from '$/components/shared/ui/theme/types';
 import { EAppLanguages } from '$/i18n/types';
 import Analytics from '@vercel/analytics/astro'
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 
 import "$styles/global.css";
 import BaseHead from '$components/seo/BaseHead.astro';
@@ -22,6 +23,7 @@ const currentLang = Astro.currentLocale || EAppLanguages.ENGLISH;
   </head>
   <body>
     <Analytics />
+    <SpeedInsights />
     <Navbar />
     <slot role="main"/>
   </body>
